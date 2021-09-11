@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angular-firestore-e40a5": {
+      "hosting": {
+        "authentication": [
+          "angular-firestore-e40a5"
+        ]
+      }
+    }
+  }
+}

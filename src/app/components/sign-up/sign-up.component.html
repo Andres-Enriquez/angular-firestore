@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-6 offset-md-3">
+            <div class="card shadow-sm rounded mb-4">
+                <div class="card-body">
+                    <form [formGroup]="registerForm">
+                        <div class="text-center mb-3">
+                            <img width="80" alt="Angular Logo"
+                                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="textFirstname" placeholder="Ingresar nombres"
+                                formControlName="firstName" [class.is-invalid]="firstNameInvalid">
+                            <label for="textFirstname">Nombres</label>
+                            <small *ngIf="firstNameInvalid" class="text-danger">
+                                Ingrese el nombre completo
+                            </small>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="textLastname" placeholder="Ingresar nombres"
+                                formControlName="lastName" [class.is-invalid]="lastNameInvalid">
+                            <label for="textLastname">Apellidos</label>
+                            <small *ngIf="lastNameInvalid" class="text-danger">
+                                Ingrese el apellido completo
+                            </small>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="textEmail"
+                                placeholder="Ingresar correo electronico" formControlName="correo"
+                                [class.is-invalid]="emailInvalid">
+                            <label for="textEmail">Correo Electronico</label>
+                            <small *ngIf="emailInvalid" class="text-danger">
+                                Ingrese el correo electronico
+                            </small>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="textPass1" placeholder="Ingresar nombres"
+                                formControlName="pass1">
+                            <label for="textPass1">Contraseña</label>
+                            <small *ngIf="pass1Invalid" class="text-danger">
+                                Ingrese la contraseña debe contener minimo 6 caracteres</small>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="textPass2"
+                                placeholder="Ingresa la contraseña" formControlName="pass2">
+                            <label for="textPass2">Confirmar contraseña</label>
+                            <small *ngIf="pass2Invalid" class="text-danger">
+                                Ingrese la contraseña debe contener minimo 6 caracteres</small>
+                        </div>
+                        <div class="d-grid gap-1 mt-4">
+                            <button class="btn btn-lg btn-primary" type="button"
+                                [disabled]="!registerForm.valid" (click)="signUp()">REGÍSTRATE</button>
+                        </div>
+                        <div class="col-md-12 text-center mt-4">
+                            ¿Ya tienes una cuenta? <a [routerLink]="['/signIn']" class="text-primary"><b>Iniciar
+                                    sesión</b></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
