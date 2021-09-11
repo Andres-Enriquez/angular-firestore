@@ -9,6 +9,7 @@ Este es un proyecto que permite a un usuario registrarse, iniciar sesion, cerrar
 
 ## Configuracion credenciales
 Debe anexar en el archivo environments.ts y environment.prod.ts las credenciales de firebase de su proyecto para probar el codigo
+```javascript
 export const config = {
   apiKey: 'YOUR_API_KEY_HERE',
   authDomain: 'YOUR_AUTH_DOMAIN_HERE',
